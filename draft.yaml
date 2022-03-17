@@ -1,0 +1,6 @@
+models:
+  Dependence:
+    id
+controllers:
+  Dependence:
+    resource

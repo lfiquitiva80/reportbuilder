@@ -1,0 +1,31 @@
+created:
+    - app/Http/Controllers/DependenceController.php
+    - database/factories/DependenceFactory.php
+    - database/migrations/2021_10_07_193823_create_dependences_table.php
+    - app/Models/Dependence.php
+    - tests/Feature/Http/Controllers/DependenceControllerTest.php
+    - app/Http/Requests/DependenceStoreRequest.php
+    - app/Http/Requests/DependenceUpdateRequest.php
+    - resources/views/dependence/index.blade.php
+    - resources/views/dependence/create.blade.php
+    - resources/views/dependence/show.blade.php
+    - resources/views/dependence/edit.blade.php
+updated:
+    - routes/web.php
+models:
+    Models\EmailTemplate: { content: text, name: string, subject: string }
+    Models\Example: { name: string, description: string, status_id: 'integer unsigned' }
+    Models\Folder: { name: string, folder_id: 'integer unsigned nullable', resource: 'boolean nullable' }
+    Models\Form: { name: string, table_name: string, '`read`': boolean, edit: boolean, '`add`': boolean, '`delete`': boolean, pagination: integer }
+    Models\FormField: { name: string, type: string, browse: boolean, '`read`': boolean, edit: boolean, '`add`': boolean, relation_table: 'string nullable', relation_column: 'string nullable', form_id: 'integer unsigned', column_name: string }
+    Models\Menulist: { name: string }
+    Models\Menurole: { role_name: string, menus_id: 'integer unsigned' }
+    Models\Menus: { name: string, href: 'string nullable', icon: 'string nullable', slug: string, parent_id: 'integer unsigned nullable', menu_id: 'integer unsigned', sequence: integer }
+    Models\Notes: { title: string, content: text, note_type: string, applies_to_date: date, users_id: 'integer unsigned', status_id: 'integer unsigned' }
+    Models\RoleHierarchy: { role_id: 'integer unsigned', hierarchy: integer }
+    Models\Status: { name: string, class: string }
+    Models\User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, menuroles: string, remember_token: 'string:100 nullable' }
+    Models\Users: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, menuroles: string, remember_token: 'string:100 nullable' }
+    Query: { id: id }
+    Builder: { id: id }
+    Dependence: { id: id }
